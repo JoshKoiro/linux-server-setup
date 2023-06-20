@@ -4,6 +4,8 @@
     # Peppermint Linux already has Git and SSH installed
 # CONFIGURE ROUTER STATIC IP
 
+read -p "Please enter the local static IP Address of this server: " HOST_IP
+
 # UPDATE REPOS
 sudo apt-get update
 sudo apt-get upgrade -y
