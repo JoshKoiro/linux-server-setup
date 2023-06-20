@@ -49,8 +49,7 @@ git clone https://github.com/JoshKoiro/linux-server-setup.git
 ```
 Once these files have been downloaded, run the following command:
 ```
-cd 
-sudo ./installServer.sh
+cd linux-server-setup && sudo ./installServer.sh
 ```
 
 This will proceed to run through the main script that will install all of the setup items and services listed above.
