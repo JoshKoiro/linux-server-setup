@@ -1,0 +1,14 @@
+https://linuxize.com/post/getting-started-with-tmux/
+
+//create a new instance
+tmux new -s [session_name]
+
+//list tmux instances
+tmux ls
+
+// attach to a tmux instance
+tmux attach -t [session_name]
+
+//detatch from tmux instance
+Ctrl+b d
+

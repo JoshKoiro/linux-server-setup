@@ -1,0 +1,71 @@
+version: "3.7"
+services:
+  pocketbase:
+    image: ghcr.io/muchobien/pocketbase:latest
+    container_name: pocketbase
+    restart: unless-stopped
+    command:
+      - --encryptionEnv #optional
+      - ENCRYPTION #optional
+    environment:
+      ENCRYPTION: example #optional
+    ports:
+      - "8090:8090"
+    volumes:
+      - /home/docker/pocketbase/pb_data:/pb_data
+      - /home/docker/pocketbase/pb_public:/pb_public #optional
+    healthcheck: #optional (recommended) since v0.10.0
+      test: wget --no-verbose --tries=1 --spider http://localhost:8090/api/health || exit 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  speedtest:
+      container_name: speedtest
+      image: henrywhitaker3/speedtest-tracker
+      ports:
+          - 8765:80
+      volumes:
+          - /home/docker/speedtest/config:/config
+      environment:
+          - TZ=
+          - PGID=
+          - PUID=
+          - OOKLA_EULA_GDPR=true
+      logging:
+          driver: "json-file"
+          options:
+              max-file: "10"
+              max-size: "200k"
+      restart: unless-stopped
+  organizr_dashboard:
+    container_name: organizr_dashboard
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - /home/docker/organizr/config:/config
+    ports:
+      - 80:80
+    image: organizr/organizr
+  ghost:
+    image: ghost:latest
+    restart: unless-stopped
+    ports:
+      - 8190:2368
+    environment:
+      # see https://ghost.org/docs/config/#configuration-options
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: example
+      database__connection__database: ghost
+      # this url value is just an example, and is likely wrong for your environment!
+      url: http://[SERVER URL]:8190
+      # contrary to the default mentioned in the linked documentation, this image defaults to NODE_ENV=production (so development mode needs to be explicitly specified if desired)
+      #NODE_ENV: development
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
