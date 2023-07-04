@@ -13,6 +13,7 @@ Below are a list of the additional programs and services that are added by this 
 - OpenSSH Server
 - Net-Tools
 - [TMux](https://github.com/tmux/tmux/wiki)
+- [Neovim](https://neovim.io)
 - [NetData](https://www.netdata.cloud)
 - [Python](https://www.python.org)
 - [Node.js](https://nodejs.org/en)

@@ -22,8 +22,10 @@ sudo apt-get install net-tools -y
 # located at /%USERNAME%/.ssh/
 
 # INSTALL TMUX
-sudo apt-get install tmux
+sudo apt-get install tmux -y
 
+# INSTALL NEOVIM
+sudo apt-get install neovim -y
 # INSTALL DOCKER
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh
