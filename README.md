@@ -1,6 +1,8 @@
 # linux-server-setup
 Set of scripts for starting local home servers using Peppermint Linux and Docker
 
+Run `install.sh` to install all of the programs and dependencies listed below
+
 ***This code has only been written and evaluated by myself, so it should be considered in an alpha state until there are more uses of it on different systems. Since I'm learning and self-taught in regards to Docker and setting up home server systems, I would appreciate any pull requests if you run into any errors or see problems with the code in certain circumstances.***
 
 ## Overview
