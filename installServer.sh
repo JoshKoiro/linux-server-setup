@@ -95,8 +95,8 @@ nvm install --lts
 
 # Install Golang
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
-# Remove and previous go installation and place the tar.gz file in the correct location
-rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
+# place the tar.gz file in the correct location. NOTE - you must remove any previous installation of golang using the command rm -rf /usr/local/go prior to running this script
+tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
 # set the path environment variable
 export PATH=$PATH:/usr/local/go/bin
 
