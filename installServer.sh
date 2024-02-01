@@ -7,12 +7,11 @@
 read -p "Please enter the local static IP Address of this server: " HOST_IP
 
 # UPDATE REPOS
-sudo nala update
-sudo nala upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 
 # INSTALL NALA PACKAGE MANAGER
-sudo nala install nala
-
+sudo apt-get install nala
 # INSTALL OPEN SSH SERVER
 sudo nala install openssh-server ii -y
 # INSTALL NETSTAT
@@ -26,8 +25,29 @@ sudo nala install net-tools -y
 # INSTALL TMUX
 sudo nala install tmux -y
 
+# INSTALL HOMEBERW
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# INSTALL WGET for downloading files
+brew install wget
+
 # INSTALL NEOVIM
-sudo nala install neovim -y
+brew install neovim
+
+# INSTALL LAZYGIT (FOR LAZYVIM)
+brew install lazygit
+
+# Install ripgrep for Lazyvim
+brew install ripgrep
+
+# INSTALL Lazyvim
+
+# move nvim config to backup
+mv ~/.config/nvim{,.bak}
+# clone the repo for LAZYVIM
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+# remove the .git folder to you can add it to your own repo
+rm -rf ~/.config/nvim/.git
 
 # INSTALL DOCKER
 curl -fsSL https://get.docker.com -o get-docker.sh
