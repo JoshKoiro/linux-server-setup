@@ -11,11 +11,15 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # INSTALL NALA PACKAGE MANAGER
-sudo apt-get install nala
+sudo apt-get install nala -y
+
 # INSTALL OPEN SSH SERVER
 sudo nala install openssh-server ii -y
 # INSTALL NETSTAT
 sudo nala install net-tools -y
+
+# INSTALL neofetch (for pretty screenshots!)
+sudo nala install neofetch -y
 
 # status is automatically running
 # if you are re-installing a server with the same ip address,
@@ -88,6 +92,13 @@ sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | 
 source ~/.bashrc
 source ~/.zshrc
 nvm install --lts
+
+# Install Golang
+wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
+# Remove and previous go installation and place the tar.gz file in the correct location
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
+# set the path environment variable
+export PATH=$PATH:/usr/local/go/bin
 
 # UPDATE logind.conf file so that system doesn't sleep when lid is closed
 sudo cp logind.conf /etc/systemd/
