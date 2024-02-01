@@ -1,20 +1,22 @@
 # THINGS THAT SHOULD BE DONE BEFORE RUNNING THIS SCRIPT
 
 # INSTALL LINUX (Debian-based version)
-    # Peppermint Linux already has Git and SSH installed
+# Peppermint Linux already has Git and SSH installed
 # CONFIGURE ROUTER STATIC IP
 
 read -p "Please enter the local static IP Address of this server: " HOST_IP
 
 # UPDATE REPOS
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo nala update
+sudo nala upgrade -y
+
+# INSTALL NALA PACKAGE MANAGER
+sudo nala install nala
 
 # INSTALL OPEN SSH SERVER
-sudo apt-get install openssh-server ii -y
-
+sudo nala install openssh-server ii -y
 # INSTALL NETSTAT
-sudo apt-get install net-tools -y
+sudo nala install net-tools -y
 
 # status is automatically running
 # if you are re-installing a server with the same ip address,
@@ -22,10 +24,11 @@ sudo apt-get install net-tools -y
 # located at /%USERNAME%/.ssh/
 
 # INSTALL TMUX
-sudo apt-get install tmux -y
+sudo nala install tmux -y
 
 # INSTALL NEOVIM
-sudo apt-get install neovim -y
+sudo nala install neovim -y
+
 # INSTALL DOCKER
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh
@@ -58,7 +61,7 @@ cd ghost
 sudo docker compose up
 
 # Install Python
-sudo apt-get install python3 -y
+sudo nala install python3 -y
 
 # Install Node.js with node version manager (NVM)
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
