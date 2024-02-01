@@ -11,14 +11,18 @@ These scripts assume you have a debian based linux distro installed on a compute
 ### Included Services
 
 Below are a list of the additional programs and services that are added by this install script and will be running at completion of the installation process.
-
+- [Nala](https://gitlab.com/volian/nala)
 - OpenSSH Server
+- [Btop](https://github.com/aristocratos/btop)
 - Net-Tools
+- [Neofetch](https://github.com/dylanaraps/neofetch)
 - [TMux](https://github.com/tmux/tmux/wiki)
 - [Neovim](https://neovim.io)
+- [Lazyvim](https://lazyvim.org)
 - [NetData](https://www.netdata.cloud)
 - [Python](https://www.python.org)
 - [Node.js](https://nodejs.org/en)
+- [Go](https://go.dev)
 - [Docker](https://www.docker.com)
 - [Portainer](https://www.portainer.io) (Docker Container)
 - [AdGuard](https://adguard.com/en/welcome.html) (Docker Container)
