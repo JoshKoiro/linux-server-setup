@@ -44,6 +44,9 @@ brew install lazygit
 # Install ripgrep for Lazyvim
 brew install ripgrep
 
+# Install fd
+brew install fd
+
 # INSTALL Lazyvim
 
 # move nvim config to backup
