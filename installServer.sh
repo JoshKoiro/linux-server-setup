@@ -35,6 +35,9 @@ sudo nala install tmux -y
 # INSTALL WGET for downloading files
 brew install wget
 
+# INSTALL GUM CLI TOOLS
+brew install gum
+
 # INSTALL NEOVIM
 brew install neovim
 
