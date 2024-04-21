@@ -50,6 +50,9 @@ brew install ripgrep
 # Install fd
 brew install fd
 
+# Install bat (cat replacement)
+sudo nala install bat -y
+
 # INSTALL Lazyvim
 
 # move nvim config to backup
