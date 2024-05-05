@@ -8,22 +8,51 @@ Run `install.sh` to install all of the programs and dependencies listed below
 ## Overview
 These scripts assume you have a debian based linux distro installed on a computer prior to running the scripts. The majority of the services that will be installed are going to be running in isolated docker containers on the system.
 
-### Included Services
+## Install Core Services
+The Core services is what I want to use on any new linux server system. This is designed based on the debian docker base image.
 
-Below are a list of the additional programs and services that are added by this install script and will be running at completion of the installation process.
+Here is a complete list of the core services:
 - [Nala](https://gitlab.com/volian/nala)
 - OpenSSH Server
 - [Btop](https://github.com/aristocratos/btop)
 - Net-Tools
+- Bat (Cat replacement)
 - [Neofetch](https://github.com/dylanaraps/neofetch)
 - [TMux](https://github.com/tmux/tmux/wiki)
 - [Neovim](https://neovim.io)
 - [Lazyvim](https://lazyvim.org)
 - [NetData](https://www.netdata.cloud)
+- [Docker](https://www.docker.com)
+- [Go](https://go.dev)
 - [Python](https://www.python.org)
 - [Node.js](https://nodejs.org/en)
-- [Go](https://go.dev)
-- [Docker](https://www.docker.com)
+
+
+First update and upgrade any existing packages on the system while logged in as root:
+```
+su -
+apt update && apt upgrade -y
+```
+
+Next install curl and run the script as root:
+
+```
+apt install curl -y
+```
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/linux-server-setup/main/installCore.sh)"
+```
+
+After installing the base packages, it is time to import the dotfile configurations.
+
+*TODO*
+
+Once these packages are installed and configured, the next step is to determine what additional packages to install.
+
+### Additional Services and Packages
+
+Below are a list of the additional programs and services that are added by this install script and will be running at completion of the installation process.
 - [Portainer](https://www.portainer.io) (Docker Container)
 - [AdGuard](https://adguard.com/en/welcome.html) (Docker Container)
 - [Pocketbase](https://pocketbase.io) (Docker Container)
