@@ -1,0 +1,1 @@
+echo "APP USER PORT" | column -t && sudo lsof -i | grep "(LISTEN)" | awk '{print $1, $3, $9}' | column -t | sort -u
