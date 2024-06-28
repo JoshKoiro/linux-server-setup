@@ -37,7 +37,7 @@ apt update && apt upgrade -y
 Next install curl and run the script as root:
 
 ```
-apt install curl -y
+apt install curl -y && apt install sudo -y
 ```
 
 ```
