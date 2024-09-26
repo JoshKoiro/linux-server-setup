@@ -2,7 +2,7 @@
 
 # Refer to https://docs.docker.com/engine/install/debian/ to verify script
 curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
+sudo bash get-docker.sh
 
 # Define function to set the user permissions
 setUser() {
