@@ -6,8 +6,8 @@ Set of scripts for starting local home servers using Peppermint Linux and Docker
 ## Overview
 These scripts assume you have a debian based linux distro installed on a computer prior to running the scripts. These scripts are organized into different sections:
 
-- installScripts (for installation of programs and services)
-- configScripts (to automate the process of setting up different system configurations)
+- [installScripts](https://github.com/JoshKoiro/linux-server-setup/blob/main/installScripts/installScripts.md) (for installation of programs and services)
+- [configScripts](https://github.com/JoshKoiro/linux-server-setup/blob/main/configScripts/configScripts.md) (to automate the process of setting up different system configurations)
 - composeScripts (docker-compose files for building useful docker containers)
 
 Click on the links to read more details about the scripts in each section.
