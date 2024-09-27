@@ -10,6 +10,10 @@ setUser() {
   sudo usermod -aG docker $USER
   newgrp docker
 }
+
+# Clean up downloaded file
+rm get-docker.sh
+
 # Ask the user if they would like to enable the current user with access to the docker user group
 
 echo "Do you wish to enable non-sudo user access to docker user group?"
@@ -22,6 +26,3 @@ select yn in "Yes" "No"; do
   No) exit ;;
   esac
 done
-
-# Clean up downloaded file
-rm get-docker.sh
