@@ -7,3 +7,7 @@
 ```
 /bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/linux-server-setup/main/configScripts/configDNS.sh)"
 ```
+## Create SSH keys for Github
+```
+/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/github-ssh/main/config.sh)"
+```
