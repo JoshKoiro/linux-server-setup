@@ -7,7 +7,7 @@
 sudo nala install resolvconf -y
 
 sudo systemctl start resolvconf
-sudo systemctl enable resovconf
+sudo systemctl enable resolvconf
 
 # backup /etc/resolv.conf
 sudo cp /etc/resolv.conf /etc/resolv.conf.bak
