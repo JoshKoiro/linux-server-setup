@@ -1,3 +1,5 @@
+# Config(uration) Scripts
+
 ## Set Computer Name
 This script adjusts the /hostname and /hosts values on your linux machine to match with a custom name.
 ```
