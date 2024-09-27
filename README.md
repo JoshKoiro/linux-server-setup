@@ -1,8 +1,6 @@
 # linux-server-setup
 Set of scripts for starting local home servers using Peppermint Linux and Docker
 
-Run `install.sh` to install all of the programs and dependencies listed below
-
 ***This code has only been written and evaluated by myself, so it should be considered in an alpha state until there are more uses of it on different systems. Since I'm learning and self-taught in regards to Docker and setting up home server systems, I would appreciate any pull requests if you run into any errors or see problems with the code in certain circumstances.***
 
 ## Overview
@@ -30,7 +28,7 @@ apt install curl -y && apt install sudo -y
 ```
 Now we can run the installCore.sh script. This command pulls it directly from github and executes the code without having to save any files to disk.
 ```
-/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/linux-server-setup/main/installCore.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/linux-server-setup/main/installScripts/installCore.sh)"
 ```
 Next, 
 Once these core packages are installed you may refer to the table of contents above to browse the other configurations and scripts that can be run.
