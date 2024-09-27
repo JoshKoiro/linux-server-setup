@@ -22,3 +22,6 @@ select yn in "Yes" "No"; do
   No) exit ;;
   esac
 done
+
+# Clean up downloaded file
+rm get-docker.sh
