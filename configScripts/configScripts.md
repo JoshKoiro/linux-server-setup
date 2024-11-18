@@ -15,3 +15,9 @@ more details for this script can be found at https://github.com/JoshKoiro/github
 ```
 /bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/github-ssh/main/config.sh)"
 ```
+
+## Change the IP Address of a Proxmox server
+This is a simple script to edit the required files of the proxmox linux installation to change the static ip address of the promox server instance.
+```
+/bin/bash -c "$(curl -fsSL https://raw.Githubusercontent.com/JoshKoiro/linux-server-setup/main/configScripts/change-proxmox-ip.sh)"
+```
